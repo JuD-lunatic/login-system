@@ -8,8 +8,7 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        $credentials = $request->only('username', 'password');
-
+        $credentials = $request->only('name', 'password');
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $role = 'unknown';
