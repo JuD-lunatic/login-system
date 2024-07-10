@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\LoginController;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Route;
@@ -13,7 +14,8 @@ Route::post('/register', function (FormRequest $request) {
     $user = [
         'name' => "camille",
         'password' => "pass",
-        'email' => "camille.abang@unc.edu.ph"
+        'email' => "camille.abang@unc.edu.ph",
+        'role' => "college_poc"
     ];
     User::create($user);
     return response([
