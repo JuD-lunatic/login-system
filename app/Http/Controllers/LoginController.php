@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -16,9 +17,9 @@ class LoginController extends Controller
             if ($user->role == 'student') {
                 $role = 'student';
             } elseif ($user->role == 'college_poc') {
-                $role = 'college_poc';
+                $role = 'collegepoc';
             } elseif ($user->role == 'poc_head') {
-                $role = 'poc_head';
+                $role = 'pochead';
             }
 
             return response()->json(['role' => $role, 'message' => 'Login successful'], 200);
