@@ -10,15 +10,3 @@ Route::get('/', function () {
 });
 
 Route::post('/login', [LoginController::class, 'login']);
-Route::post('/register', function (FormRequest $request) {
-    $user = [
-        'name' => "camille",
-        'password' => "pass",
-        'email' => "camille.abang@unc.edu.ph",
-        'role' => "college_poc"
-    ];
-    User::create($user);
-    return response([
-        "user" => $user
-    ]);
-});
